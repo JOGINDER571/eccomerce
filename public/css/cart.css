@@ -1,0 +1,13 @@
+table{
+    padding: 2rem 4rem;
+}
+
+
+
+table thead tr th{
+    padding: 0 2rem;
+}
+table tbody tr td{
+    padding: 0 2rem;
+}
+

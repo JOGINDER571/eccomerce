@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/cart.css">
+    <title>freshFood</title>
+    <style>
+    </style>
+  </head>
+  <body>
+    {{!-- topbar --}}
+    {{>topbar}}
+    <!-- navbar -->
+    {{>navbar}}
+
+    {{!-- product section --}}
+    <section class="top_product">
+      <div class="container" >
+        <h1 class="section-heading" >Top Products</h1>
+        <!-- slider -->
+        <div class="slider">
+          <div class="food_slider">
+            <div class="food_card">
+              <div class="product_image">
+                <img class="product-img" src="./images/vegies.png" alt="img" />
+              </div>
+              <hr />
+              <div class="product_info">
+                <h2 class="product-name">Vagies</h2>
+                <div class="img">
+                  <img src="./icons/start-filled.svg" alt="img" />
+                  <img src="./icons/start-filled.svg" alt="img" />
+                  <img src="./icons/start-filled.svg" alt="img" />
+                  <img src="./icons/star-grey.svg" alt="img" />
+                  <img src="./icons/star-grey.svg" alt="img" />
+                </div>
+                <span class="product-price">$30</span>
+                <div class="cart">
+                  <img src="./icons/cart.svg" alt="" />
+                  <button  class="btn add_cart">Add to cart</button>
+                </div>
+              </div>
+            </div>
+            <div class="food_card">
+              <div class="product_image">
+                <img class="product-img" src="./images/coffee.jpg" alt="img" />
+              </div>
+              <hr />
+              <div class="product_info">
+                <h2 class="product-name">Coffee</h2>
+                <div class="img">
+                  <img src="./icons/start-filled.svg" alt="img" />
+                  <img src="./icons/start-filled.svg" alt="img" />
+                  <img src="./icons/start-filled.svg" alt="img" />
+                  <img src="./icons/star-grey.svg" alt="img" />
+                  <img src="./icons/star-grey.svg" alt="img" />
+                </div>
+                <span class="product-price">$20</span>
+                <div class="cart">
+                  <img src="./icons/cart.svg" alt="" />
+                  <button  class="btn add_cart" >Add to cart</button>
+                </div>
+              </div>
+            </div>
+            <div class="food_card">
+              <div class="product_image">
+                <img class="product-img" src="./images/pizza.png" alt="img" />
+              </div>
+              <hr />
+              <div class="product_info">
+                <h2 class="product-name">Pizza</h2>
+                <div class="img">
+                  <img src="./icons/start-filled.svg" alt="img" />
+                  <img src="./icons/start-filled.svg" alt="img" />
+                  <img src="./icons/start-filled.svg" alt="img" />
+                  <img src="./icons/star-grey.svg" alt="img" />
+                  <img src="./icons/star-grey.svg" alt="img" />
+                </div>
+                <span class="product-price">$70</span>
+                <div class="cart">
+                  <img src="./icons/cart.svg" alt="" />
+                  <button  class="btn add_cart">Add to cart</button>
+                </div>
+              </div>
+            </div>
+            <div class="food_card">
+              <div class="product_image">
+                <img class="product-img" src="./images/burger.png" alt="img" />
+              </div>
+              <hr />
+              <div class="product_info">
+                <h2 class="product-name">Burger</h2>
+                <div class="img">
+                  <img src="./icons/start-filled.svg" alt="img" />
+                  <img src="./icons/start-filled.svg" alt="img" />
+                  <img src="./icons/start-filled.svg" alt="img" />
+                  <img src="./icons/star-grey.svg" alt="img" />
+                  <img src="./icons/star-grey.svg" alt="img" />
+                </div>
+                <span class="product-price">$40</span>
+                <div class="cart">
+                  <img src="./icons/cart.svg" alt="" />
+                  <button  class="btn add_cart">Add to cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="container">
+        <table class="position">
+            <thead>
+                <tr class="cart-heading">
+                    <th></th>
+                    <th ><h3>ITEM</h3></th>
+                    <th></th>
+                    <th><h3>PRICE</h3></th>
+                    <th><h3>QUANTITY</h3></th>
+                    <th><h3>TOTAL</h3></th>
+
+                </tr>
+            </thead>
+            <tbody class="cart-content">
+                {{!-- <tr>
+                    <td><input class="uk-checkbox" type="checkbox"></td>
+                    <td><img class="uk-preserve-width uk-border-circle" src="images/coffee.jpg" width="40" alt=""></td>
+                    <td class="uk-table-link">
+                        <h3 class = "item-name">Strawberry Cake</h3>
+                    </td>
+                    <td class="uk-text-truncate item-price"><h3>$100</h3></td>
+                    <td><input type = 'number' class = 'num' value = '1'></td>
+                    <td class="uk-text-truncate total-price"><h3>$100</h3></td>
+                    <td><button class="removebtn" type="button">Remove</button></td>
+                </tr> --}}
+            </tbody>
+            <tr class="cart-total">
+              <td><input class="check" type="checkbox"></td>
+              <td><img src=""  width="40" alt=""></td>
+              <td>
+                  <h3 class = "item-name"><strong >Grand-Total</strong></h3>
+              </td>
+              <td><h3></h3></td>
+              <td><h3></h3></td>
+              <td class="grand-total"><h3><strong>$0</strong></h3></td>
+              
+            </tr>
+        </table>
+    </div>
+
+    <!-- footer -->
+    {{>footer}}
+
+    <script>
+      let addCart=document.getElementsByClassName('add_cart');
+      let main_container=document.getElementsByTagName('tbody')[0]
+      let quantity_field=document.getElementsByClassName('num');
+      let removeBtn=document.getElementsByClassName('removebtn');
+      for(let i=0;i<addCart.length;i++){
+        addCart[i].addEventListener('click',addToCart);
+      }
+
+      function addToCart(event){
+        let btn=event.target;
+        let btnp=btn.parentElement;
+        let grandp=btnp.parentElement;
+        let grandpp=grandp.parentElement;
+        let grandppChild=grandpp.children[0];
+        let itemName=grandp.children[0].innerText;
+        let itemPrice=grandp.children[2].innerText;
+        let itemImg=grandppChild.children[0].src;
+        let itemContainer=document.createElement('tr');
+        itemContainer.innerHTML=`
+        <td><input class="check" type="checkbox"></td>
+        <td><img  src="${itemImg}" width="50" alt=""></td>
+        <td>
+          <h3>${itemName}</h3>
+        </td>
+        <td class="item-price"><h3>${itemPrice}</h3></td>
+        <td><input type = 'number' class="num" value = '1'></td>
+        <td class="total-price"><h3>${itemPrice}</h3></td>
+        <td><button class="removebtn" type="button">Remove</button></td>`
+        main_container.append(itemContainer);
+        for(let i=0;i<quantity_field.length;i++){
+          quantity_field[i].addEventListener('change',updateTotal);
+        }
+        for(let i=0;i<removeBtn.length;i++){
+          removeBtn[i].addEventListener('click',removeitem);
+        }
+        total();
+      }
+      function updateTotal(event){
+        let no_of_items=event.target;
+        let no_of_items_parent=no_of_items.parentElement.parentElement;
+        let price_field=no_of_items_parent.getElementsByClassName('item-price')[0]
+        let total_price_field=no_of_items_parent.getElementsByClassName('total-price')[0]
+        let price_field_content=price_field.children[0].innerText.replace('$','');
+        total_price_field.children[0].innerText='$'+ no_of_items.value*price_field_content;
+
+        if(isNaN(no_of_items.value) || no_of_items.value<=1){
+          no_of_items.value=1;
+        }
+
+        total()
+      }
+      function total(){
+        let totalValue=0;
+        grandtotal=document.getElementsByClassName('grand-total')[0];
+        totalprice=document.getElementsByClassName('total-price');
+        for(let i=0;i<totalprice.length;i++){
+          total_price_content=Number(totalprice[i].innerText.replace('$',''));
+          totalValue+=total_price_content;
+        }
+        
+        grandtotal.children[0].innerText='$'+totalValue;
+      }
+      function removeitem(event){
+        remove_Btn=event.target;
+        remove_Btngrandp=remove_Btn.parentElement.parentElement;
+        remove_Btngrandp.remove();
+        total();
+      }
+
+    </script>
+
+    <script src="./js/index.js"></script>
+  </body>
+</html>

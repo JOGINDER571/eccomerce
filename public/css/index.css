@@ -1,0 +1,482 @@
+/* fonts */
+@font-face {
+  font-family: "Raleway-regular";
+  src: url("../fonts/Raleway-Regular.ttf");
+}
+@font-face {
+  font-family: "Raleway-medium";
+  src: url("../fonts/Raleway-Medium.ttf");
+}
+@font-face {
+  font-family: "Raleway-bold";
+  src: url("../fonts/Raleway-Bold.ttf");
+}
+@font-face {
+  font-family: "Raleway-semibold";
+  src: url("../fonts/Raleway-SemiBold.ttf");
+}
+@font-face {
+  font-family: "Raleway-regulart";
+  src: url("../fonts/Raleway-Regular.ttf");
+}
+@font-face {
+  font-family: "Raleway-black";
+  src: url("../fonts/Raleway-Black.ttf");
+}
+@font-face {
+  font-family: "Raleway-semibold";
+  src: url("../fonts/Raleway-SemiBold.ttf");
+}
+/* colors */
+:root {
+  --primary: #eebf00;
+  --secondary: #232838;
+  --ternary: #6c6c6c;
+  --danger: #fe4545;
+  --pure: #fefefe;
+  --light: #f0f0f0;
+  --heaven: #ffffff;
+  --footer: #20333f;
+}
+.container {
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .check{
+      display: none;
+  }
+  .about-product,
+  .our-services,
+  .container,
+  .food_slider {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+  }
+  .food_card{
+      margin: 1rem 0;
+      width: 100%;
+  }
+  .product-img{
+      margin-left: 2rem;
+      
+  }
+  .position{
+      position: relative;
+  }
+  .cart-heading{
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      left: -9%
+  }
+  .cart-heading th h3{
+      font-size: .6rem;
+      margin: .6rem 0;
+      font-weight: bold;
+  }
+  .cart-content tr{
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      right: -12%;
+  }
+  .cart-total{
+      display: flex;
+      flex-direction: column;
+      margin-top: 10rem;
+      /* position: absolute; */
+  }
+  /* services */
+  .our-services{
+    margin-top: -4rem;
+    padding-top: 0;
+  }
+  .service-card{
+    padding-bottom:2.5rem ;
+    width: 100%;
+  }
+  /* footer */
+  .footer h2{
+    font-size: 1.3rem;
+  }
+  .copyright{
+    font-size: 1rem;
+  }
+  /* topbar */
+  .icons{
+    display: none;
+  }
+  /* navbar */
+  .top .container{
+    margin-left: 4rem;
+  }
+  .top .container .contact img{
+    width: 5%;
+  }
+  .container .contact{
+    padding: .4rem 0;
+  }
+  .top .container .contact > div h4{
+    font-size: .8rem;
+  }
+  .container .branding img{
+    width: 40%;
+  }
+  .container .time img{
+    width: 5%;
+  }
+  .container .time{
+    padding: .3rem 0;
+  }
+  .navbar .container{
+    margin-left: -1rem;
+  }
+  /* hero */
+  .hero .container .left-hero h2{
+    text-align: center;
+  }
+  .left-hero .btn button{
+    padding: .3rem;
+    
+  }
+  .left-hero .btn button a{
+    font-size: 1.4rem;
+  }
+  .hero-img{
+    margin-left: 3.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    width: 65%;
+  }
+  /* about */
+  .about-product img{
+    width: 60%;
+    margin-left:  4rem;;
+    margin-top: 2rem;
+  }
+  .detail h1,p{
+    text-align: center;
+  }
+  
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1152px;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  -webkit-font-smoothing: antialiased;
+  height: 100vh;
+}
+/* topbar */
+.topbar {
+  background-color: var(--secondary);
+  color: var(--pure);
+  font-family: "Raleway-semibold";
+  padding: 1rem 0;
+}
+.topbar .container .auth > div a {
+  color: var(--pure);
+  text-decoration: none;
+}
+.topbar .container .auth > div img {
+  margin-right: 0.3rem;
+}
+.topbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.topbar .container .icons a {
+  margin-right: 1rem;
+}
+.topbar .container .auth {
+  display: flex;
+}
+.topbar .container .auth > div {
+  margin: 0 1rem;
+}
+/* top */
+.top .container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+.top .container .contact {
+  display: flex;
+  align-items: center;
+}
+.top .container .contact img {
+  margin-right: 0.45rem;
+}
+.top .container .branding {
+  display: flex;
+  align-items: center;
+}
+.top .container .time {
+  display: flex;
+  align-items: center;
+}
+.top .container .time img {
+  margin-right: 0.45rem;
+}
+.top .container .time {
+  margin-right: 0.6rem;
+}
+.top .container .contact > div h4,
+.top .time .contact > div h5 {
+  font-family: "Raleway-semibold";
+}
+/* Navbar */
+.navbar {
+  margin-top: 1rem;
+}
+.navbar .container {
+  display: flex;
+  justify-content: center;
+}
+.navbar .container a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  margin: 0 1.5rem;
+  padding: 0.5rem 1rem;
+  transition: all 0.7s ease;
+}
+.navbar .container a:hover {
+  background: var(--primary);
+  border-radius: 3rem;
+}
+.magic-shadow {
+  position: relative;
+  background: var(--heaven);
+}
+.magic-shadow::after {
+  position: absolute;
+  width: 100%;
+  height: 69px;
+  content: "";
+  display: block;
+  background-image: url("../icons/shadow.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  bottom: -22px;
+  z-index: -1;
+}
+/* body header */
+.hero {
+  background-image: url("../images/hero.png");
+  background-repeat: no-repeat;
+  overflow: hidden;
+  height: 500px;
+  background-position: 0% 0%;
+}
+.hero .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 6rem;
+}
+.hero .container .left-hero .welcome {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero .container .left-hero .welcome span {
+  margin-right: 0.5rem;
+  font-size: 1.5rem;
+}
+.hero .container .left-hero h2 span {
+  color: var(--primary);
+  margin: 0 0.5rem;
+}
+.hero .container .left-hero h2 {
+  font-size: 2rem;
+}
+.hero .container .left-hero .btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+.btn button {
+  padding: 0.7rem;
+  border-radius: 20px;
+  outline: none;
+  transition: all 0.7s ease;
+  font-size: 1rem;
+  font-weight: 400;
+  border: 3px solid var(--secondary);
+}
+.btn button a {
+  text-decoration: none;
+  font-size: 2rem;
+}
+
+.btn button:hover {
+  background-color: var(--primary);
+}
+body {
+  background-color: var(--light);
+}
+
+.section-heading {
+  position: relative;
+  text-align: center;
+  font-size: 2rem;
+  margin: 4rem 0;
+}
+.section-heading::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 4rem;
+  background: url("../icons/hr.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  top: 2rem;
+}
+.slider {
+  margin: 2rem 0;
+}
+.food_slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.food_slider hr {
+  border: 1px solid var(--light);
+  opacity: 0.8;
+}
+.food_card {
+  margin: 0 0.5rem;
+  background-color: var(--heaven);
+  /* padding: 1rem; */
+  padding: 1rem 2.5rem;
+  box-shadow: 0 6px 8px rosybrown;
+}
+.product_info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: var(--light);
+}
+.product_info .cart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary);
+  margin: 0.4rem 0;
+  border-radius: 1rem;
+}
+.product_image img {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+}
+.cart .btn {
+  outline: none;
+  padding: 0.3rem;
+  background-color: var(--pure);
+  border: 3px solid var(--secondary);
+  cursor: pointer;
+}
+.cart .btn:hover {
+  background-color: var(--ternary);
+}
+.cart img {
+  padding: 0 0.2rem;
+}
+/* about  */
+.about-product {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.about-product .detail {
+  margin-bottom: 3.5rem;
+}
+.about-product .detail h1 {
+  font-size: 2rem;
+  margin: 2rem 0;
+}
+.about-product .detail p {
+  font-size: 1.5rem;
+}
+
+/* our services */
+.our-services {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--light);
+  margin-top: 8rem;
+}
+.service-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--pure);
+  position: relative;
+}
+.service-card img {
+  position: absolute;
+  top: -2.8rem;
+}
+.service-card h2 {
+  margin-top: 4rem;
+}
+.service-card p {
+  margin: 1rem;
+  font-size: 1.5rem;
+}
+/* footer */
+footer {
+  margin: 2rem 0;
+  background-color: var(--secondary);
+  padding: 3rem 0;
+}
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--light);
+}
+.footer h2,
+p {
+  margin: 0.2rem;
+}
+.copyright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+}
